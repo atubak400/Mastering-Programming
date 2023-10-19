@@ -66,6 +66,7 @@ console.log(`Reversed Array: ${reversedArray}`);
 
 //Find the Largest Number
 const numbers = [10, 5, 20, 15, 8];
+console.log(numbers[1]);
 let largest = numbers[0];
 for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] > largest) {

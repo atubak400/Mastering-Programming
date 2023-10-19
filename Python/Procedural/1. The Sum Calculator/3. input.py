@@ -7,8 +7,3 @@ def get_numbers():
 
 list_of_numbers = get_numbers()
 
-# Function to calculate the sum of any list of numbers.
-def calculate_sum(any_list):
-    print(sum(any_list))
-
-calculate_sum(list_of_numbers)

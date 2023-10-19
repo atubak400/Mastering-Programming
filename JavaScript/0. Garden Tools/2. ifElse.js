@@ -60,6 +60,3 @@ if (playerChoice === "attack") {
     console.log("Invalid choice.");
 }
 
-// Give her chance to practice the questions
-// Talk about the design of if/else statement
-// Revise what you did in this section by summarizing the different uses of .length in words by asking her to read aloud just the comments
