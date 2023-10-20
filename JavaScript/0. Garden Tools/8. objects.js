@@ -164,33 +164,4 @@ if (typeof foundBook === "object") {
 }
 
 
-// 5. Letter Frequency Counter
-// Create a function called countLetters that takes a string as an argument and returns an object 
-// where each key is a unique letter in the string, and the corresponding value is the number of 
-// times that letter appears in the string. Ignore spaces and consider uppercase and lowercase 
-// letters as the same character (case-insensitive).
-
-function countLetters(str) {
-    const letterCount = {};
-
-    // Convert the string to lowercase
-    const lowercaseStr = str.toLowerCase();
-
-    for (const char of lowercaseStr) {
-        if (char !== ' ') { // Check if the character is not a space
-            if (letterCount[char]) {
-                letterCount[char]++;
-            } else {
-                letterCount[char] = 1;
-            }
-        }
-    }
-
-    return letterCount;
-}
-
-// Test the function
-const inputString = "Hello World";
-const result = countLetters(inputString);
-console.log(result);
 

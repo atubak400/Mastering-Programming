@@ -1,1 +1,0 @@
-print('Uzoamaka is a {} and {} girl that loves to {} everyday in {}'.format("cute", "smart", "pray", "Sun"))

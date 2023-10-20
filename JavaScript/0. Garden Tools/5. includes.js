@@ -6,10 +6,17 @@ const isSubstringInString = str.toLowerCase().includes(substring.toLowerCase());
 
 
 // Use in Arrays
-const intArray = new IntArray([1, 2, 3, 4, 5]);
+const intArray = [1, 2, 3, 4, 5];
 const value = 3;
 
-const isInArray = intArray.includes(value); 
+const isInArray = intArray.includes(value);
+
+if (isInArray) {
+  console.log(`${value} is included in the array.`);
+} else {
+  console.log(`${value} is not included in the array.`);
+}
+
 
 
 // Use in Objects
@@ -18,7 +25,17 @@ const obj = { name: 'Alice' };
 
 const isInArray2 = array.includes(obj); // This will return false because it's a reference comparison.
 
-const deepComparison = array.some(item => item.name === obj.name); // This will return true.
+const comparison = array.some(item => item.name === obj.name); // This will return true.
+
+//or
+
+if (comparison) {
+  console.log(`${JSON.stringify(obj)} is included in ${JSON.stringify(array)}.`);
+  console.log(obj, 'is included in', array);
+} else {
+  console.log(`${JSON.stringify(obj)} is not included in ${JSON.stringify(array)}.`);
+  console.log(obj, 'is not included in', array);
+}
 
 
 // Use in functions
