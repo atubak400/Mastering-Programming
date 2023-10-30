@@ -138,7 +138,8 @@ const bookCatalog = [book1, book2, book3];
 
 // Function to find a book by ISBN
 function findBookByISBN(isbn) {
-    for (const book of bookCatalog) {
+    for (let i = 0; i < bookCatalog.length; i++) {
+        const book = bookCatalog[i];
         if (book.isbn === isbn) {
             return {
                 title: book.title,
@@ -149,6 +150,7 @@ function findBookByISBN(isbn) {
     }
     return "Book not found in catalog";
 }
+
 
 // Test the function
 const searchISBN = "978-0-316-76948-0"; // Replace with an ISBN from your catalog

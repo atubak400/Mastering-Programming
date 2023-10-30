@@ -1,22 +1,9 @@
-# Function to get numbers from the user.
-def get_numbers():
-    input_string = input("Type here:")
-    list_of_strings = input_string.split()
-    list_of_numbers = [float(num) for num in list_of_strings]
-    return list_of_numbers
+from get_numbers_function import get_numbers
+from calculate_sum_function import calculate_sum
+from display_result_function import display_result
 
 
-# Function to calculate the sum of a list of numbers
-def calculate_sum(list_of_numbers):
-    sum_of_numbers = (sum(list_of_numbers))
-    return sum_of_numbers
-
-
-# Function to display the sum to the user
-def display_result(list_of_numbers, sum_of_numbers):
-    print(f'The sum of {list_of_numbers} is {sum_of_numbers}')
-
-#
+# The main function that ochestrates other functions from other files
 def main():
     list_of_numbers = get_numbers()
     sum_of_numbers = calculate_sum(list_of_numbers)
