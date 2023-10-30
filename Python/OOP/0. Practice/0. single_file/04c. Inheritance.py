@@ -33,6 +33,7 @@ class Adult(Person):
     def adult_specific_activity(self):
         return f"{self.name} is an adult and is currently {self.work}"
 
+
 # Creating instances of the Teenager and Adult classes
 teen = Teenager("Uzo", 14)
 adult = Adult("Mr. Atuba", 42)
