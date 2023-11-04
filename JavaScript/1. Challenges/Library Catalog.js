@@ -1,7 +1,9 @@
 /*Library Catalog
-You are building a library catalog system, and you need to create a function to manage books in your library. The function is called manageLibrary.
+You are building a library catalog system, and you need to create a function to manage books in your library. 
+The function is called manageLibrary.
 The manageLibrary function takes three arguments:
-		library - an object representing the library's catalog, where each book is represented as an object with properties like title, author, and checkedOut.
+		library - an object representing the library's catalog, where each book is represented as 
+    an object with properties like title, author, and checkedOut.
 		action - a string that can be one of the following: "add", "remove", or "checkout".
 		book - an object representing the book to be added, removed, or checked out.
 The function should perform the following actions based on the action provided:
@@ -12,10 +14,20 @@ The function should return the updated library catalog after performing the acti
 Here's an example of how the manageLibrary function should work:
 */
 
+  // Example usage:
+  const libraryCatalog = {
+    book1: { title: "Harry Potter", author: "J.K. Rowling", checkedOut: false },
+    book2: { title: "To Kill a Mockingbird", author: "Harper Lee", checkedOut: true },
+  };
+
 function manageLibrary(library, action, book) {
     if (action === "add") {
       // Generate a new key for the book
-      const newKey = "book" + (Object.keys(library).length + 1);
+      console.log(Object.keys(library))
+      console.log(Object.keys(library).length )
+      console.log(Object.keys(library).length + 1)
+      console.log(`book${Object.keys(library).length + 1}`)
+      const newKey = `book${Object.keys(library).length + 1}`;
       library[newKey] = book;
     } else if (action === "remove") {
       // Remove a book from the library catalog
@@ -36,12 +48,6 @@ function manageLibrary(library, action, book) {
     }
     return library;
   }
-  
-  // Example usage:
-const libraryCatalog = {
-  book1: { title: "Harry Potter", author: "J.K. Rowling", checkedOut: false },
-  book2: { title: "To Kill a Mockingbird", author: "Harper Lee", checkedOut: true },
-};
 
 const newBook = { title: "The Great Gatsby", author: "F. Scott Fitzgerald", checkedOut: false };
 
