@@ -1,5 +1,7 @@
 /*Online Store Inventory
-58. You are tasked with managing the inventory of an online store. The inventory is represented as an object that contains multiple products, each of which is also represented as an object. Each product has a unique identifier as a property name.
+58. You are tasked with managing the inventory of an online store. 
+The inventory is represented as an object that contains multiple products, each of which is also represented as an object. 
+Each product has a unique identifier as a property name.
 The updateInventory function takes four arguments:
 inventory - an object representing the online store's inventory.
 id - a number representing a specific product in the inventory.
@@ -13,7 +15,11 @@ If the product doesn't have the specified property, it should be added with the 
 The function should always return the entire inventory object.
 };
 */
-
+// Example usage:
+const storeInventory = {
+  1001: { name: "Laptop", price: 999.99, quantity: 10 },
+  1002: { name: "Headphones", price: 49.99 },
+};
 
 function updateInventory(inventory, id, property, value) {
     if (value === "") {
@@ -21,12 +27,11 @@ function updateInventory(inventory, id, property, value) {
       if (inventory[id] && inventory[id][property]) {
         delete inventory[id][property];
       }
-    } else if (property !== "quantity") {
-      // If property isn't "quantity" and value isn't an empty string, assign the value.
-      if (!inventory[id]) {
-        inventory[id] = {};
+    } else if (property !== "quantity") { // If property isn't "quantity" and value isn't an empty string, assign the value.
+      if (!inventory[id]) { // if product doesnt exist
+        inventory[id] = {}; // create the product
       }
-      inventory[id][property] = value;
+      inventory[id][property] = value; // add value to product
     } else if (property === "quantity" && value !== "") {
       // If property is "quantity" and value isn't an empty string, update the quantity.
       if (!inventory[id]) {
@@ -38,11 +43,6 @@ function updateInventory(inventory, id, property, value) {
     return inventory;
   }
   
-  // Example usage:
-  const storeInventory = {
-    1001: { name: "Laptop", price: 999.99, quantity: 10 },
-    1002: { name: "Headphones", price: 49.99 },
-  };
   
   // Update the price of a product
   const updatedInventory1 = updateInventory(storeInventory, 1001, "price", "899.99");
