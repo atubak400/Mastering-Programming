@@ -5,22 +5,42 @@ Each album is represented in the collection with a unique id as the property nam
 The findMostPopularAlbum() function should return the id of the album in the records object with the most tracks.
 */
 
-
+// Example usage:
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette', 'Purple Rain']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold',
+    tracks: ['Dancing Queen', 'Mamma Mia', 'The Winner Takes It All', 'Good song']
+  }
+};
 
 
 function findMostPopularAlbum(records) {
     let mostTracks = 0;
-    let mostPopularAlbumId = null;
+    let mostPopularAlbumId = "none"; // or null
     const recordIdsList = Object.keys(records);
-    //console.log(recordIdsList)
+    console.log(recordIdsList)
   
     for (let i = 0; i < recordIdsList.length; i++) {
       const id = recordIdsList[i];
-      //console.log(id)
+      // console.log(id)
       const album = records[id];
-      //console.log(album)
+      console.log(album)
   
-      if (album.tracks && album.tracks.length > mostTracks) {
+      if (album.tracks.length > mostTracks) {
         mostTracks = album.tracks.length;
         //console.log(`Most tracks = ${mostTracks}`)
         mostPopularAlbumId = id;
@@ -29,29 +49,6 @@ function findMostPopularAlbum(records) {
   
     return mostPopularAlbumId;
   }
-  
-  // Example usage:
-  const recordCollection = {
-    2548: {
-      albumTitle: 'Slippery When Wet',
-      artist: 'Bon Jovi',
-      tracks: ['Let It Rock', 'You Give Love a Bad Name']
-    },
-    2468: {
-      albumTitle: '1999',
-      artist: 'Prince',
-      tracks: ['1999', 'Little Red Corvette', 'Purple Rain']
-    },
-    1245: {
-      artist: 'Robert Palmer',
-      tracks: []
-    },
-    5439: {
-      albumTitle: 'ABBA Gold',
-      tracks: ['Dancing Queen', 'Mamma Mia', 'The Winner Takes It All']
-    }
-  };
-  
   const mostPopularAlbumId = findMostPopularAlbum(recordCollection);
-  console.log(mostPopularAlbumId); // Output: 5439
+  // console.log(`${mostPopularAlbumId} is the most popular album`); // Output: 5439
   

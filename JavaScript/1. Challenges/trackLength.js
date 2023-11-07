@@ -39,14 +39,14 @@ const recordCollection = {
 
 function getAverageTrackLength(records, id) {
   if (records[id] && records[id].tracks) {
-    const albumTracksObject = records[id].tracks;
-    //console.log(albumTracksObject)
-    const trackNamesList = Object.keys(albumTracksObject);
-    //console.log(trackNamesList)
+    const albumTracks = records[id].tracks;
+    // console.log(albumTracks)
+    const trackNamesList = Object.keys(albumTracks);
+    // console.log(trackNamesList)
     let totalLength = 0;
 
     for (let i = 0; i < trackNamesList.length; i++) {
-      totalLength += albumTracksObject[trackNamesList[i]];
+      totalLength += albumTracks[trackNamesList[i]];
     }
 
     const trackCount = trackNamesList.length;
@@ -64,5 +64,5 @@ function getAverageTrackLength(records, id) {
 
 
 
-const averageTrackLength = getAverageTrackLength(recordCollection, 1245);
+const averageTrackLength = getAverageTrackLength(recordCollection, 5439);
 console.log(averageTrackLength); // Output: 293.3333333333333
