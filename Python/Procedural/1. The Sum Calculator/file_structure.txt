@@ -1,0 +1,15 @@
+my_app/
+    ├── main.py
+    ├── get_numbers_function.py
+    ├── calculate_sum_function.py
+    ├── display_result_function.py
+    ├── authenticate_function.py
+    ├── ui/
+    │   ├── __init__.py
+    │   ├── main_window.py
+    │   ├── other_ui_modules.py
+    │   ├── images/
+    │       ├── (your image files, e.g., logo.png)
+    │
+    └── data/
+        ├── (data files or databases, if applicable)

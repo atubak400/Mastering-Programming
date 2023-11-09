@@ -12,5 +12,3 @@ def main():
         display_result(list_of_numbers, sum_of_numbers)
 
 main()
-
-
