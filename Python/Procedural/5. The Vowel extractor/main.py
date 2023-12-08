@@ -22,5 +22,5 @@ def main():
     extracted_vowels = extract_vowels(user_name)
     display_result(extracted_vowels)
 
-if __name__ == "__main__":
-    main()
+
+main()

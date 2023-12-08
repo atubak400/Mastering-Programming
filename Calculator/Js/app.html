@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function sumNumbers() {
+      const input = document.getElementById('numbers-input').value;
+      const numbers = input.split(' ').map(Number);
+      const sum = numbers.reduce((acc, num) => acc + num, 0);
+      document.getElementById('result').innerText = 'Sum: ' + sum;
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col items-stretch justify-center" style="background-image: url(https://source.unsplash.com/random); background-size: cover;">
+  <div class="bg-white px-4 py-2 rounded shadow-md">
+    <h2 class="text-xl mb-4">Number Calculator</h2>
+    <label for="numbers-input">Enter numbers separated by spaces:</label>
+    <input id="numbers-input" type="text" class="border-2 border-gray-300 p-3 text-lg mb-3 w-full">
+    <button onclick="sumNumbers()" class="bg-blue-500 text-white py-3 px-6 text-lg rounded mt-2">Calculate</button>
+    <div>
+      <span id="result" class="text-lg font-bold mt-2 block"></span>
+    </div>
+  </div>
+</body>
+</html>
